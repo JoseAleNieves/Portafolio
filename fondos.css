@@ -6,14 +6,8 @@ html {
 
 /* From Uiverse.io by vaibhavchandranv */ 
 
-#sobre_mi{
-  display: flex;
-  gap: 10px;
-  padding: 1rem;
-}
-
 #anclas {
-  padding: 5px 10px;
+  padding: 5px;
   margin-top: 10px;
   border: 3px solid #000000;
   box-shadow: 3px 3px 0 #000000;
@@ -344,7 +338,7 @@ html {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
-  padding: 1rem;
+  padding: 0.5rem;
   align-items: center;
   justify-content: center;
   overflow: hidden;

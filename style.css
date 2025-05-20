@@ -9,10 +9,10 @@
 @keyframes tracking-in-contract-bck{0%{letter-spacing:0em;transform:translateY(800px);opacity:0}40%{opacity:.6}100%{transform:translateY(0);opacity:1}}
 
 /* Reset básico para evitar márgenes y paddings por defecto */
-*{
+/**{
 	border: 1px solid;
 	border-color: red;
-}
+}*/
 
 /* Contenedor principal con grid para layout general */
 body {
@@ -21,7 +21,7 @@ body {
   color: #333;
   background: #f9f9f9;
   display: grid;
-  grid-template-columns: 1fr min(1100px, 80%);
+  grid-template-columns: 1fr;
 }
 
 main {
@@ -47,6 +47,10 @@ header {
   margin-bottom: 1rem;
 }
 
+#avatarfinal {
+	display: none;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -69,7 +73,11 @@ nav a:hover {
 
 /*Sobre mí*/
 
-
+#sobre_mi{
+  display: flex;
+  gap: 10px;
+  padding: 1rem;
+}
 
 /*fin de sobre mí*/
 
@@ -199,13 +207,6 @@ footer {
 
 /* Media Queries para ajustes en pantallas pequeñas */
 @media (max-width: 768px) {
-  body {
-    grid-template-columns: 1fr;
-  }
-
-  main {
-    padding: 1rem;
-  }
 
   nav ul {
     gap: 0.6rem;
@@ -216,9 +217,29 @@ footer {
     gap: 1rem;
   }
 
-  .project-image {
-    height: 150px;
-  }
+}
+
+@media (max-width: 681px) {
+
+	body {
+		display: block;
+	}
+
+	#cabecera img {
+		max-width: 40%;
+        display: flex;
+        margin: auto;
+	}
+
+	#avatar {
+		display: none;
+	}
+
+	#avatarfinal {
+		max-width: 50%;
+        display: flex;
+        margin: auto;
+	}
 }
 
 @media (max-width: 508px) {
@@ -228,6 +249,10 @@ footer {
 @keyframes tracking-in-contract-bck{0%{letter-spacing:0em;transform:translateX(600px);opacity:0}40%{opacity:.6}100%{transform:translateX(0);opacity:1}}
 
 @keyframes roll-in-blurred-left{0%{transform:translateX(-800px) rotate(-720deg);filter:blur(50px);opacity:0}100%{transform:translateX(0) rotate(0deg);filter:blur(0);opacity:1}}
+
+#sobre_mi {
+	display: grid;
+}
 
 #cabecera img {
   max-width: 60%;
@@ -256,22 +281,5 @@ main {
 
   .icons {
     font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 320px) {
-
-main {
-  grid-column: 1;
-  gap: 0.5rem;
-  padding: 0.5rem;
-}
-
-  .project-image {
-    height: 100px;
-  }
-
-  .icons {
-    font-size: 1rem;
   }
 }
